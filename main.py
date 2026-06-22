@@ -186,6 +186,79 @@
 #print(f"Side C = {c}")
 
 
+# if = Do some code only IF some conditions is true
+# Else do something else
+#---- age example
+
+#age = int(input("Enter your age:  "))
+
+#if age >= 100:
+    #  print("You are too old to sign up!")   
+#elif age < 0:
+   # print("You haven't been born yet!?")
+#elif age >= 18:
+  # print("You are now signed up!")
+#else: 
+ #   print("You must be 18+ to sign up!")    
+#-----
+
+#--- 2rd food example
+#response = input("Would you like food?: (Y/N):")
+
+#if response == "Y":
+  #  print("Have some food!")
+#else:
+ #   print("No food for you!")
+
+
+
+#----3rd example
+#name = input("Enter your name:")
+
+#if name == "":
+ #   print("You didn't type in your name!")
+#else:
+  #  print(f"hello {name}")
+
+
+#----4rd
+
+#online = True
+
+#if online:
+ #   print("The user is online")
+#else:
+ #   print("The user is offline")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
