@@ -233,27 +233,47 @@
 
 #Python calculator
 
-operator = input("Enter an operator (+ - * / ): ")
-num1 = float(input("Enter the first number: "))  # aq sachiroa float
-num2 = float(input("Enter the second number: "))
+#operator = input("Enter an operator (+ - * / ): ")
+#num1 = float(input("Enter the first number: "))  # aq sachiroa float
+#num2 = float(input("Enter the second number: "))
 #print(num1 + num2) That's the first printing 
 
 
-if operator == "+":
- result = num1 + num2
- print(round(result))   
-elif operator == "-":
-  result = num1 - num2
-  print(round(result))
-elif operator == "*":
-  result = num1 * num2
-  print(round(result))
-elif operator == "/":
-  result = num1 / num2
-  print(round(result))
+#if operator == "+":
+ #result = num1 + num2
+ #print(round(result))   
+#elif operator == "-":
+#  result = num1 - num2
+#  print(round(result))
+#elif operator == "*":
+#  result = num1 * num2
+#  print(round(result))
+#elif operator == "/":
+#  result = num1 / num2
+#  print(round(result))
 
-else:
-  print(f"{operator} is not a valid operator! ")
+#else:
+ # print(f"{operator} is not a valid operator! ")
+
+
+
+ 
+#Python weight converter program
+
+#weight = float(input ("Enter your weight: "))
+#unit = input ("kilograms or pounds? (K or L):  ")
+
+#if unit == "K":
+   # weight = weight * 2.205
+  #  unit = "Lbs."
+ #elif unit == "L":
+    #weight = weight / 2.205
+   # unit = "kgs"
+  #  print(f"Your weight is: {round(weight, 1)} {unit}")
+#else:
+    #print(f"{unit} was not valid")
+#-----
+
 
 
 
