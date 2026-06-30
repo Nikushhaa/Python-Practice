@@ -50,21 +50,62 @@
 #     #tu ricxvi martivia
 # number = int(input("Number: "))
 # prime(number)
+
+
+#----- prime numbers
+# import math
+
+# def unprime(number):
+#     if number <= 1:
+#         print(f"{number} is not prime")
+#         return False
+
+#     for i in range(2, int(math.sqrt(number)) + 1):
+#         if number % i == 0:
+#             print(f"{number} is not prime")
+#             return False
+
+#     print(f"{number} is prime")
+#     return True
+
+
+# number = int(input("Random number = "))
+# unprime(number)
+
+
+
 import math
 
-def unprime(number):
-    if number <= 1:
-        print(f"{number} is not prime")
-        return False
+def solve_quadratic(a, b, c):
+    # discriminanti
+    d = b**2 - 4*a*c
 
-    for i in range(2, int(math.sqrt(number)) + 1):
-        if number % i == 0:
-            print(f"{number} is not prime")
-            return False
+    # shemowmeba
+    if d > 0:
+        # fesvebis gamotvla
+        x1 = (-b + math.sqrt(d)) / (2*a)
+        x2 = (-b - math.sqrt(d)) / (2*a)
 
-    print(f"{number} is prime")
-    return True
+        print("Two solutions:")
+        print("x1 =", x1)
+        print("x2 =", x2)
+
+    elif d == 0:
+        # d s fesvis gamotvla
+        x = -b / (2*a)
+
+        print("One solution:")
+        print("x =", x)
+
+    else:
+        # tu uaryofitia fesvebi ararsebobs
+        print("No real solutions")
 
 
-number = int(input("Random number = "))
-unprime(number)
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
+
+# gamodzaxeba
+solve_quadratic(a, b, c)
+
