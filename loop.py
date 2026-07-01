@@ -86,25 +86,25 @@
 # print(solve(a, b, c))   
 import math
 
-def solve_cubic(a, b, c, d):
-    # კოეფიციენტების ნორმალიზება
-    b, c, d = b/a, c/a, d/a
+def solve_cubic(a, b, c, d): # funqcia romelsac gadaecema 4 ricxvi
+    
+    b, c, d = b/a, c/a, d/a  #koeficienti iyofa a ze
 
-    p = c - b**2 / 3
-    q = 2*b**3 / 27 - b*c / 3 + d
-    D = (q/2)**2 + (p/3)**3
+    p = c - b**2 / 3#vitvlit P s 
+    q = 2*b**3 / 27 - b*c / 3 + d #vitvlit Q s
+    D = (q/2)**2 + (p/3)**3 #vitvlit D s
 
-    cbrt = lambda x: x**(1/3) if x >= 0 else -((-x)**(1/3))
+    cbrt = lambda x: x**(1/3) if x >= 0 else -((-x)**(1/3)) #kuburi fesvis funqcia
 
-    if D > 0:
+    if D > 0: #tu D dadebitia
         x1 = cbrt(-q/2 + D**0.5) + cbrt(-q/2 - D**0.5) - b/3
         return (round(x1, 6),)
-    elif D == 0:
-        u = cbrt(-q/2)
+    elif D == 0: #tu D nulia
+        u = cbrt(-q/2) #vpoulobt kubur fesvs
         return (round(2*u - b/3, 6), round(-u - b/3, 6))
-    else:
+    else: #tu D araa dadebiti mashin 3 pasuxi gvaqvs
         m = 2 * (-p/3)**0.5
-        t = math.acos(3*q / (p*m)) / 3
+        t = math.acos(3*q / (p*m)) / 3 #acos gveubneba kutxes
         return (
             round(m * math.cos(t) - b/3, 6),
             round(m * math.cos(t + 2*math.pi/3) - b/3, 6),
@@ -117,3 +117,25 @@ print(solve_cubic(
     float(input("c: ")),
     float(input("d: "))
 ))
+# D diskriminanti
+# P gardaqmnili koeficienti
+# Q aris meore koeficienti
+# cbrt kuburi fesvi
+
+# მომხმარებელი წერს a,b,c,d-ს
+
+# ↓
+
+# კოდი ამარტივებს კუბურ განტოლებას
+
+# ↓
+
+# ითვლის p, q და D-ს
+
+# ↓
+
+# D-ის მიხედვით არჩევს რომელი ფორმულა გამოიყენოს
+
+# ↓
+
+# ითვლის x პასუხებს

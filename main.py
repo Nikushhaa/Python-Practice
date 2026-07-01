@@ -288,7 +288,45 @@
 #else:
  #print(f"{unit} Is an invalid unit of measurement")
 
+# ვქმნით მასივს (list)
+fruits = ["apple", "banana", "orange"]
 
+# ვბეჭდავთ მთელ მასივს
+print("ყველა ხილი:")
+print(fruits)
+
+
+# ვიღებთ ერთ ელემენტს ინდექსით
+print("\nპირველი ხილი არის:")
+print(fruits[0])
+
+
+# ვცვლით ელემენტს
+fruits[1] = "mango"
+
+print("\nbanana შევცვალეთ mango-თი:")
+print(fruits)
+
+
+# ვამატებთ ახალ ელემენტს ბოლოში
+fruits.append("kiwi")
+
+print("\nდავამატეთ kiwi:")
+print(fruits)
+
+
+# ვშლით ელემენტს
+fruits.remove("orange")
+
+print("\nწავშალეთ orange:")
+print(fruits)
+
+
+# ყველა ელემენტზე გავლა
+print("\nყველა ხილი ცალ-ცალკე:")
+
+for fruit in fruits:
+    print(fruit)
 
 
 
