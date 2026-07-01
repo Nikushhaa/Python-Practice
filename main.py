@@ -329,45 +329,65 @@
 #     print(fruit)
 
 # ვქმნით dictionary-ს
-student = {
-    "name": "Nika",
-    "age": 18,
-    "grade": 95
-}
+# student = {
+#     "name": "Nika",
+#     "age": 18,
+#     "grade": 95
+# }
 
-# მთლიანი dictionary-ს დაბეჭდვა
-print(student)
-
-
-# ერთი მონაცემის მიღება
-print(student["name"])
+# # მთლიანი dictionary-ს დაბეჭდვა
+# print(student)
 
 
-# მონაცემის შეცვლა
-student["age"] = 19
+# # ერთი მონაცემის მიღება
+# print(student["name"])
 
 
-# ახალი მონაცემის დამატება
-student["city"] = "Batumi"
+# # მონაცემის შეცვლა
+# student["age"] = 19
 
 
-# მონაცემის წაშლა
-del student["grade"]
+# # ახალი მონაცემის დამატება
+# student["city"] = "Batumi"
 
 
-# საბოლოო შედეგი
-print(student)
+# # მონაცემის წაშლა
+# del student["grade"]
 
 
-# ყველა მონაცემის ნახვა
-for key, value in student.items():
-    print(key, "=", value)
+# # საბოლოო შედეგი
+# print(student)
 
 
+# # ყველა მონაცემის ნახვა
+# for key, value in student.items():
+#     print(key, "=", value)
 
 
 
 
+# sentence = input("write sentence: ")
+
+# # deleting spaces
+# sentence = sentence.replace(" ", "")
+
+# # checking if the sentence is a palindrome
+# if sentence == sentence[::-1]:  # mteli teqsti igeba tavidan bolomde ar izgudeba saidan sad
+#     print("palindrome")
+# else:
+#     print("not palindrome")
+
+
+firststr = input("write sentence: ")
+
+secondstr = input("what to find: ")
+replacestr = input("replace with: ")
+
+if secondstr in firststr:
+    firststr = firststr.replace(secondstr, replacestr, 1)
+    print("Result:", firststr)
+else:
+    raise ValueError("Error: word not found in sentence")
 
 
 
