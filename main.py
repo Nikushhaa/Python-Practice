@@ -289,46 +289,79 @@
  #print(f"{unit} Is an invalid unit of measurement")
 
 # ვქმნით მასივს (list)
-fruits = ["apple", "banana", "orange"]
+# fruits = ["apple", "banana", "orange"]
 
-# ვბეჭდავთ მთელ მასივს
-print("ყველა ხილი:")
-print(fruits)
-
-
-# ვიღებთ ერთ ელემენტს ინდექსით
-print("\nპირველი ხილი არის:")
-print(fruits[0])
+# # ვბეჭდავთ მთელ მასივს
+# print("ყველა ხილი:")
+# print(fruits)
 
 
-# ვცვლით ელემენტს
-fruits[1] = "mango"
-
-print("\nbanana შევცვალეთ mango-თი:")
-print(fruits)
+# # ვიღებთ ერთ ელემენტს ინდექსით
+# print("პირველი ხილი არის:")
+# print(fruits[0])
 
 
-# ვამატებთ ახალ ელემენტს ბოლოში
-fruits.append("kiwi")
+# # ვცვლით ელემენტს
+# fruits[1] = "mango"
 
-print("\nდავამატეთ kiwi:")
-print(fruits)
-
-
-# ვშლით ელემენტს
-fruits.remove("orange")
-
-print("\nწავშალეთ orange:")
-print(fruits)
+# print("banana შევცვალეთ mango-თი:")
+# print(fruits)
 
 
-# ყველა ელემენტზე გავლა
-print("\nყველა ხილი ცალ-ცალკე:")
+# # ვამატებთ ახალ ელემენტს ბოლოში
+# fruits.append("kiwi")
 
-for fruit in fruits:
-    print(fruit)
+# print("დავამატეთ kiwi:")
+# print(fruits)
 
 
+# # ვშლით ელემენტს
+# fruits.remove("orange")
+
+# print("წავშალეთ orange:")
+# print(fruits)
+
+
+# # ყველა ელემენტზე გავლა
+# print("ყველა ხილი ცალ-ცალკე:")
+
+# for fruit in fruits:
+#     print(fruit)
+
+# ვქმნით dictionary-ს
+student = {
+    "name": "Nika",
+    "age": 18,
+    "grade": 95
+}
+
+# მთლიანი dictionary-ს დაბეჭდვა
+print(student)
+
+
+# ერთი მონაცემის მიღება
+print(student["name"])
+
+
+# მონაცემის შეცვლა
+student["age"] = 19
+
+
+# ახალი მონაცემის დამატება
+student["city"] = "Batumi"
+
+
+# მონაცემის წაშლა
+del student["grade"]
+
+
+# საბოლოო შედეგი
+print(student)
+
+
+# ყველა მონაცემის ნახვა
+for key, value in student.items():
+    print(key, "=", value)
 
 
 
