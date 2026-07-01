@@ -378,28 +378,28 @@
 #     print("not palindrome")
 
 
-firststr = input("write sentence: ")
+# firststr = input("write sentence: ")
 
-secondstr = input("what to find: ")
-replacestr = input("replace with: ")
+# secondstr = input("what to find: ")
+# replacestr = input("replace with: ")
+# quantitystr = input("how many times to replace: ")
 
-if secondstr in firststr:
-    firststr = firststr.replace(secondstr, replacestr, 1)
-    print("Result:", firststr)
-else:
-    raise ValueError("Error: word not found in sentence")
+# if secondstr in firststr:
+#     firststr = firststr.replace(secondstr, replacestr, int(quantitystr))
+#     print("Result:", firststr)
+# else:
+#     raise ValueError("Error: word not found in sentence")
 
+num = int(input("write number: "))
 
+reverse_num = 0 #საწყისი შედეგი
 
+while num > 0:
+    digit = num % 10 #ბოლო ციფრის აღება 10-ზე გაყოფის ნაშთი ყოველთვის არის ბოლო ციფრი.
+    reverse_num = reverse_num * 10 + digit #რიცხვს ვაცვლით “მარცხნივ”
+    num = num // 10 # ბოლო ციფრის მოშორება
 
-
-
-
-
-
-
-
-
+print("Result:", reverse_num)
 
 
 
