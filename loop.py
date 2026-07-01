@@ -74,38 +74,46 @@
 
 
 
+# discriminant = lambda a, b, c: b*b - 4*a*c   # D 
+
+# solve = lambda a, b, c: (
+
+#   -b / (2*a) if discriminant(a, b, c) == 0      # 0 tolia anu 1
+#     else ((-b - discriminant(a, b, c)**0.5) / (2*a), (-b + discriminant(a, b, c)**0.5) / (2*a))  # dadebiti anu 2 fesvi
+# )
+
+# a, b, c = float(input("a: ")), float(input("b: ")), float(input("c: "))   # koeficientebi
+# print(solve(a, b, c))   
 import math
 
-def solve_quadratic(a, b, c):
-    # discriminanti
-    d = b**2 - 4*a*c
+def solve_cubic(a, b, c, d):
+    # კოეფიციენტების ნორმალიზება
+    b, c, d = b/a, c/a, d/a
 
-    # shemowmeba
-    if d > 0:
-        # fesvebis gamotvla
-        x1 = (-b + math.sqrt(d)) / (2*a)
-        x2 = (-b - math.sqrt(d)) / (2*a)
+    p = c - b**2 / 3
+    q = 2*b**3 / 27 - b*c / 3 + d
+    D = (q/2)**2 + (p/3)**3
 
-        print("Two solutions:")
-        print("x1 =", x1)
-        print("x2 =", x2)
+    cbrt = lambda x: x**(1/3) if x >= 0 else -((-x)**(1/3))
 
-    elif d == 0:
-        # d s fesvis gamotvla
-        x = -b / (2*a)
-
-        print("One solution:")
-        print("x =", x)
-
+    if D > 0:
+        x1 = cbrt(-q/2 + D**0.5) + cbrt(-q/2 - D**0.5) - b/3
+        return (round(x1, 6),)
+    elif D == 0:
+        u = cbrt(-q/2)
+        return (round(2*u - b/3, 6), round(-u - b/3, 6))
     else:
-        # tu uaryofitia fesvebi ararsebobs
-        print("No real solutions")
+        m = 2 * (-p/3)**0.5
+        t = math.acos(3*q / (p*m)) / 3
+        return (
+            round(m * math.cos(t) - b/3, 6),
+            round(m * math.cos(t + 2*math.pi/3) - b/3, 6),
+            round(m * math.cos(t + 4*math.pi/3) - b/3, 6)
+        )
 
-
-a = float(input("Enter a: "))
-b = float(input("Enter b: "))
-c = float(input("Enter c: "))
-
-# gamodzaxeba
-solve_quadratic(a, b, c)
-
+print(solve_cubic(
+    float(input("a: ")),
+    float(input("b: ")),
+    float(input("c: ")),
+    float(input("d: "))
+))
