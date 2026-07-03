@@ -390,20 +390,66 @@
 # else:
 #     raise ValueError("Error: word not found in sentence")
 
-num = int(input("write number: "))
+# num = int(input("write number: "))
 
-reverse_num = 0 #საწყისი შედეგი
+# reverse_num = 0 #საწყისი შედეგი
 
-while num > 0:
-    digit = num % 10 #ბოლო ციფრის აღება 10-ზე გაყოფის ნაშთი ყოველთვის არის ბოლო ციფრი.
-    reverse_num = reverse_num * 10 + digit #რიცხვს ვაცვლით “მარცხნივ”
-    num = num // 10 # ბოლო ციფრის მოშორება
+# while num > 0:
+#     digit = num % 10 #ბოლო ციფრის აღება 10-ზე გაყოფის ნაშთი ყოველთვის არის ბოლო ციფრი.
+#     reverse_num = reverse_num * 10 + digit #რიცხვს ვაცვლით “მარცხნივ”
+#     num = num // 10 # ბოლო ციფრის მოშორება
 
-print("Result:", reverse_num)
+# print("Result:", reverse_num)
+#------ bubble sort
+# arr = [5, 3, 4, 1]
+
+# n = len(arr)
+
+# for i in range(n):
+#     for j in range(0, n - i - 1):
+#         if arr[j] > arr[j + 1]:
+#             arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+# print("Sorted:", arr)
+
+arr = input("Enter numbers separated by space: ").split()
 
 
+for i in range(len(arr)):
+    arr[i] = int(arr[i])
+
+n = len(arr)
+
+for i in range(n):
+    for j in range(0, n - i - 1):
+        if arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+def selection_sort(numbers, order):
+
+    for i in range(len(numbers)):
+        index = i
+
+        for j in range(i + 1, len(numbers)):
+
+            if order == "A":
+                if numbers[j] < numbers[index]:
+                    index = j
+
+            elif order == "D":
+                if numbers[j] > numbers[index]:
+                    index = j
+
+        numbers[i], numbers[index] = numbers[index], numbers[i]
+
+    return numbers
 
 
+numbers = [15, 8, 23, 4, 19]
+
+order = input("Ascending or Descending (A/D): ").upper()
+
+print(selection_sort(numbers, order))
 
 
 

@@ -84,39 +84,39 @@
 
 # a, b, c = float(input("a: ")), float(input("b: ")), float(input("c: "))   # koeficientebi
 # print(solve(a, b, c))   
-import math
+# import math
 
-def solve_cubic(a, b, c, d): # funqcia romelsac gadaecema 4 ricxvi
+# def solve_cubic(a, b, c, d): # funqcia romelsac gadaecema 4 ricxvi
     
-    b, c, d = b/a, c/a, d/a  #koeficienti iyofa a ze
+#     b, c, d = b/a, c/a, d/a  #koeficienti iyofa a ze
 
-    p = c - b**2 / 3#vitvlit P s 
-    q = 2*b**3 / 27 - b*c / 3 + d #vitvlit Q s
-    D = (q/2)**2 + (p/3)**3 #vitvlit D s
+#     p = c - b**2 / 3#vitvlit P s 
+#     q = 2*b**3 / 27 - b*c / 3 + d #vitvlit Q s
+#     D = (q/2)**2 + (p/3)**3 #vitvlit D s
 
-    cbrt = lambda x: x**(1/3) if x >= 0 else -((-x)**(1/3)) #kuburi fesvis funqcia
+#     cbrt = lambda x: x**(1/3) if x >= 0 else -((-x)**(1/3)) #kuburi fesvis funqcia
 
-    if D > 0: #tu D dadebitia
-        x1 = cbrt(-q/2 + D**0.5) + cbrt(-q/2 - D**0.5) - b/3
-        return (round(x1, 6),)
-    elif D == 0: #tu D nulia
-        u = cbrt(-q/2) #vpoulobt kubur fesvs
-        return (round(2*u - b/3, 6), round(-u - b/3, 6))
-    else: #tu D araa dadebiti mashin 3 pasuxi gvaqvs
-        m = 2 * (-p/3)**0.5
-        t = math.acos(3*q / (p*m)) / 3 #acos gveubneba kutxes
-        return (
-            round(m * math.cos(t) - b/3, 6),
-            round(m * math.cos(t + 2*math.pi/3) - b/3, 6),
-            round(m * math.cos(t + 4*math.pi/3) - b/3, 6)
-        )
+#     if D > 0: #tu D dadebitia
+#         x1 = cbrt(-q/2 + D**0.5) + cbrt(-q/2 - D**0.5) - b/3
+#         return (round(x1, 6),)
+#     elif D == 0: #tu D nulia
+#         u = cbrt(-q/2) #vpoulobt kubur fesvs
+#         return (round(2*u - b/3, 6), round(-u - b/3, 6))
+#     else: #tu D araa dadebiti mashin 3 pasuxi gvaqvs
+#         m = 2 * (-p/3)**0.5
+#         t = math.acos(3*q / (p*m)) / 3 #acos gveubneba kutxes
+#         return (
+#             round(m * math.cos(t) - b/3, 6),
+#             round(m * math.cos(t + 2*math.pi/3) - b/3, 6),
+#             round(m * math.cos(t + 4*math.pi/3) - b/3, 6)
+#         )
 
-print(solve_cubic(
-    float(input("a: ")),
-    float(input("b: ")),
-    float(input("c: ")),
-    float(input("d: "))
-))
+# print(solve_cubic(
+#     float(input("a: ")),
+#     float(input("b: ")),
+#     float(input("c: ")),
+#     float(input("d: "))
+# ))
 # D diskriminanti
 # P gardaqmnili koeficienti
 # Q aris meore koeficienti
@@ -139,3 +139,77 @@ print(solve_cubic(
 # ↓
 
 # ითვლის x პასუხებს
+
+# numbers = [15, 8, 22, 4, 1]
+
+# arraymax = numbers[0]
+
+# for i in range(len(numbers)):
+#     if numbers[i] > arraymax:
+#         arraymax = numbers[i]
+
+# print("Maximum number is: ", arraymax)
+
+
+
+# numbers = [15, 8, 22, 4, 1]
+
+# arrayminimum = numbers[0]
+
+# for i in range(len(numbers)):
+#     if numbers[i] < arrayminimum:
+#         arrayminimum = numbers[i]
+
+# print("Minimum number is:", arrayminimum)
+
+# def find_max(numbers):
+#     if len(numbers) == 0:
+#         raise IndexError("Array's empty!")
+#     arraymax = numbers[0]
+
+#     for i in range(len(numbers)):
+#         if numbers[i] > arraymax:
+#             arraymax = numbers[i]
+
+#     return arraymax
+
+
+# numbers = [15, 8, 23, 4, 19]
+
+# print("Maximum number is:", find_max(numbers))
+
+
+# def find_min(numbers):
+#     if len(numbers) == 0:
+#         raise IndexError("Array's empty!")
+#     arraymin = numbers[0]
+
+#     for i in range(len(numbers)):
+#         if numbers[i] < arraymin:
+#             arraymin = numbers[i]
+
+#     return arraymin
+
+
+# numbers = [15, 8, 23, 4, 19]
+
+# print("Minimum number is: ", find_min(numbers))
+
+
+def selection_sort(numbers):
+
+    for i in range(len(numbers)):
+        min_index = i
+
+        for j in range(i + 1, len(numbers)):
+            if numbers[j] < numbers[min_index]:
+                min_index = j
+
+        numbers[i], numbers[min_index] = numbers[min_index], numbers[i]
+
+    return numbers
+
+
+numbers = [15, 8, 23, 4, 19]
+
+print("Sorted list:", selection_sort(numbers))
