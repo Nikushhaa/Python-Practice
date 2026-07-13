@@ -246,15 +246,29 @@
 #               prunt or assign one of two values based on a condition
 #               X if condition else Y
 
-num = 5
-a = 6
-b = 9
-# print("positive"  if num > 0 else "negative")
-# result = "EVEN" if num % 2 == 0 else "ODD"
-max_num= a if a > b else b
-max_min= a if a < b else b
-status = "Adult" if age >= 18 else "Minor"
-print(status)
+# num = 5
+# a = 6
+# b = 9
+# # print("positive"  if num > 0 else "negative")
+# # result = "EVEN" if num % 2 == 0 else "ODD"
+# max_num= a if a > b else b
+# max_min= a if a < b else b
+# status = "Adult" if age >= 18 else "Minor"
+# print(status)
+
+#------- string methods
+#name = input("Enter your name: ")
+# phone_number = input("Enter your phone number: ")
+# #result =len(name)  # length of the string
+# #result =name.find("N") # find the index of the first occurrence of "N"
+# # result = name.rfind("o")
+# # name = name.capitalize()  # capitalize the first letter of the string
+# #name = name.upper()  # convert the string to uppercase
+# #name = name.lower()  # convert the string to lowercase
+# # result = name.isdigit()  # check if the string contains only digits
+# #result = name.isalpha()  # check if the string contains only alphabetic characters ( if it contains space it will be false any sort of digits too)
+# phone_number.count("-", " ")  # count the number of occurrences of "-" in the string
+# print(phone_number)
 
 
 
