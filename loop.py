@@ -230,14 +230,31 @@
 
 
 
-temp = -5
-is_sunny = True
-if temp >= 28 and is_sunny:
-    print("It is hot outside!")
-    print("It is sunny outside!")
-elif temp <= 0 and is_sunny:
-    print("It is freezing outside!")
-    print("It is sunny outside!")
-elif temp < 28 and temp > 0 and is_sunny:
-    print("It is warm outside!")
-    print("It is sunny outside!")              
+# temp = -5
+# is_sunny = True
+# if temp >= 28 and is_sunny:
+#     print("It is hot outside!")
+#     print("It is sunny outside!")
+# elif temp <= 0 and is_sunny:
+#     print("It is freezing outside!")
+#     print("It is sunny outside!")
+# elif temp < 28 and temp > 0 and is_sunny:
+#     print("It is warm outside!")
+#     print("It is sunny outside!")             
+# 
+# ---------- conditional expression = a one-line shortcut for the if-else statement (ternary-operator)
+#               prunt or assign one of two values based on a condition
+#               X if condition else Y
+
+num = 5
+a = 6
+b = 9
+# print("positive"  if num > 0 else "negative")
+# result = "EVEN" if num % 2 == 0 else "ODD"
+max_num= a if a > b else b
+max_min= a if a < b else b
+status = "Adult" if age >= 18 else "Minor"
+print(status)
+
+
+
