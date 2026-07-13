@@ -195,21 +195,36 @@
 
 # print("Minimum number is: ", find_min(numbers))
 
-
-def selection_sort(numbers):
-
-    for i in range(len(numbers)):
-        min_index = i
-
-        for j in range(i + 1, len(numbers)):
-            if numbers[j] < numbers[min_index]:
-                min_index = j
-
-        numbers[i], numbers[min_index] = numbers[min_index], numbers[i]
-
-    return numbers
+# from sosogay import find_min, find_max
 
 
-numbers = [15, 8, 23, 4, 19]
+# def selection_sort(numbers, order):
 
-print("Sorted list:", selection_sort(numbers))
+#     for i in range(len(numbers)):
+#         if order == "ascending":
+#             index = find_min(numbers[i:]) + i
+#         elif order == "descending":
+#             index = find_max(numbers[i:]) + i
+#         numbers[i], numbers[index] = numbers[index], numbers[i]
+
+#     return numbers
+
+
+# array = [15, 8, 23, 4, 19]
+
+# print(selection_sort(array, "ascending"))
+# print(selection_sort(array, "descending"))
+
+
+# logical operators = evaluate multiple conditions (or, and, not)
+#                                  or = at least one condition must be true
+#                                  and = both conditions must be true
+#                                  not = inverts the condition (not false, not True)
+temp = 25
+is_raining = False
+
+if temp > 35 or temp< 0 or is_raining:
+    print("The outdoor event is canceled")
+else:
+    print("The outdoor event is still scheduled")
+                
