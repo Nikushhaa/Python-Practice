@@ -270,5 +270,15 @@
 # phone_number.count("-", " ")  # count the number of occurrences of "-" in the string
 # print(phone_number)
 
-
-
+#-------validating user input exercise
+#username = input("Enter your name: ")
+#username.find(" ")
+#username.isalpha()
+# if len(username)>12:
+#     print("Username is too long")
+#elif not username.find(" ") == -1:
+#     print("Username contains a space")
+#elif not username.isalpha():
+#     print("Username contains a number")
+# else:
+#     print(f"welcome {username}!")    
