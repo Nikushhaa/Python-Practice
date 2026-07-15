@@ -307,18 +307,37 @@
 
 
 
+# format specifiers = {value:flags} format value based on what flags are inserted
 
 
 
+# .(number)f = round to that many decimal places (fixed point)
+# :(number) = allocate that many spaces for the value (minimum width)
+# :< = left align the value within the allocated space
+# :> = right align the value within the allocated space
+# :^ = center align the value within the allocated space
+# :+ = show a plus sign for positive numbers and a minus sign for negative numbers
+# : = show a space for positive numbers and a minus sign for negative numbers
+# :  = insert a space before positive numbers
+# :, = use a comma as a thousands separator
+
+
+price1 = 3.14159
+price2 = -987.65
+price3 =  12.34
+print(f"price 1 is ${price1:.2f}")
+print(f"price 2 is ${price2:.2f}")
+print(f"price 3 is ${price3:.2f}")
 
 
 
+# print(f"price 1 is ${price1:.1f}")
+# print(f"price 2 is ${price2:.1f}")
+# print(f"price 3 is ${price3:.1f}")
 
-
-
-
-
-
+# print(f"price 1 is ${price1:10}")
+# print(f"price 2 is ${price2:10}")
+# print(f"price 3 is ${price3:10}")
 
 
 
