@@ -282,3 +282,49 @@
 #     print("Username contains a number")
 # else:
 #     print(f"welcome {username}!")    
+
+
+
+
+#--------------- indexing = accessing elements of a sequence using [] indexing operators
+
+#                        [start:stop:step]  start = starting index, stop = stopping index, step = how many steps to move forward
+#                        start and step are optional, stop is required
+#  credit_number = "1234-5678-9012-3456"
+# credit_number = credit_number[::-1]   #reversing the string using slicing
+#print(credit_number)  # 6543-2109-8765-4321
+
+#print(credit_number[0])  # 1
+#print(credit_number[5])  # 5
+# print(credit_number[0:4])  # 1234
+
+# print(credit_number[5:9])
+#print(credit_number[5:]) #printing everythingf from index 5 to the end
+# using negative indexing will start stepping from the end of the string
+#print(credit_number[::2])  #printing every second character in the string
+#last_digits = credit_number[-4:] # printing the last 4 digits of the string
+# print(f"XXXX-XXXX-XXXX-{last_digits}")  # printing the last 4 digits of the string with X's in front
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
