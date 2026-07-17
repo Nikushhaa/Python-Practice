@@ -14,8 +14,8 @@ The goal of this repository is to learn Python step by step and build a strong f
 ## Variables
 ```python
 name = "Nika"
-age = 19
-price = 19.99
+age = 18
+price = ???
 is_student = True
 Data Types
 Strings → text
